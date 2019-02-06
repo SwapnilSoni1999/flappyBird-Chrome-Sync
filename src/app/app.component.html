@@ -1,21 +1,48 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<div id="kampooter" *ngIf="mobail">
+  <div id="gamecontainer">
+    <div id="gamescreen">
+      <div id="sky" class="animated">
+        <div id="flyarea">
+          <div id="ceiling" class="animated"></div>
+          <!-- This is the flying and pipe area container -->
+          <div id="player" class="bird animated"></div>
+  
+          <div id="bigscore"></div>
+  
+          <div id="splash"></div>
+  
+          <div id="scoreboard">
+            <div id="medal"></div>
+            <div id="currentscore"></div>
+            <div id="highscore"></div>
+            <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+          </div>
+  
+          <!-- Pipes go here! -->
+        </div>
+      </div>
+      <div id="land" class="animated">
+        <div id="debug"></div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <a href="http://www.dotgears.com/">original game/concept/art by dong nguyen</a>
+    <a href="http://nebezb.com/">recreated by nebez briefkani</a>
+    <a href="http://github.com/nebez/floppybird/">view github project</a>
+  </div>
+  <div class="boundingbox" id="playerbox"></div>
+  <div class="boundingbox" id="pipebox"></div>
+
+</div>
+
+<div class="mob-view">
+  <div class="container">
+    <div class="row h-100">
+      <div class="col-md-12 text-center my-auto vertical">
+        <button (click)="jump()" class="push push--flat" ></button>
+      </div>
+    </div>
+  </div>
+</div>
